@@ -1,4 +1,4 @@
-""" Intodução ao tryu/except
+""" Intodução ao try/except
 try -> tentar executar o código
 except -> ocorreu um erro ao tentar executar
 """
@@ -29,3 +29,4 @@ try:
     print(f"O dobro de {numero_str} é {numero_float * 2}")
 except:
     print("Isso não é um número.")
+
