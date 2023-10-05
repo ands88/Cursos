@@ -47,7 +47,7 @@ while True:
         print("Parabéns! Você adivinhou a palavra secreta:", palavra_secreta)
         break
 
-    continuar = input("Deseja continuar tentando? (S/N): ").lower()
-    if continuar != "s":
-        print("Você desistiu. A palavra secreta era:", palavra_secreta)
-        break
+    #continuar = input("Deseja continuar tentando? (S/N): ").lower()
+    #if continuar != "s":
+     #   print("Você desistiu. A palavra secreta era:", palavra_secreta)
+      #  break

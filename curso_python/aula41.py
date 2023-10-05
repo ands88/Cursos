@@ -1,5 +1,5 @@
 # while/else
-string = 'Qualquervalor'
+string = 'Qualquer_valor'
 i = 0 #variável representando o índice
 
 while i < len(string):
