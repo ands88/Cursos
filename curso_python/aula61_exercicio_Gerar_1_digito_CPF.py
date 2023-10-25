@@ -23,3 +23,8 @@ contrário disso:
 
 O primeiro dígito do CPF é 7
 """
+
+cpf = '746824890'
+
+for numero in cpf:
+    print (numero)
