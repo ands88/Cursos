@@ -24,7 +24,51 @@ contrário disso:
 O primeiro dígito do CPF é 7
 """
 
-cpf = '746824890'
+"""cpf = "006968261"
+digito = "51"
+i = 1
+numero = ()
+total = 0
 
-for numero in cpf:
-    print (numero)
+while i <= len(cpf):
+    x = cpf[i * (-1)]
+    x = int(x)
+    total += x * (i + 1)
+    i += 1
+    print(total)
+
+dv = (10 * total) % 11
+if dv > 9:
+    dv = 0
+
+print(dv)
+dv = str(dv)
+if dv == digito[0]:
+    print("Primeiro dígito está válido!")
+"""
+
+cpf_inteiro = "00696826151"
+digito = cpf_inteiro[len(cpf_inteiro) - 2 :]
+cpf = cpf_inteiro[0 : len(cpf_inteiro) - 2]
+i = 1
+numero = ()
+total = 0
+print(cpf_inteiro)
+
+while i <= len(cpf):
+    x = cpf[i * (-1)]
+    x = int(x)
+    total += x * (i + 1)
+    i += 1
+
+dv = 11 - total % 11
+if dv > 9:
+    dv = 0
+
+
+dv = str(dv)
+if dv == digito[0]:
+    print(f"O seu primeiro dígito é", dv)
+    print("Primeiro dígito está válido!")
+else:
+    print("O CPF digitado é inválido.")

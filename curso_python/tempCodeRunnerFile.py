@@ -1,1 +1,2 @@
-11
+    else:
+        print("O CPF digitado é inválido.")
