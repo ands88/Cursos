@@ -10,7 +10,7 @@
 # dicionários.
 # Imutáveis: str, int, float, bool, tuple
 # Mutável: dict, list
-""" person = {
+person = {
     "nome": "Anderson",
     "sobrenome": "Martins",
     "idade": 35,
@@ -25,12 +25,12 @@
 print(f"altura: ", person["altura"])
 
 for key in person:
-    print(key, person[key]) """
+    print(key, person[key])
 
 
 # Manipulando chaves e valores em dicionários
 
-person = {}
+""" person = {}
 
 key = "nome"
 person[key] = "Anderson"
@@ -51,3 +51,4 @@ if person.get("sobrenome") is None:
     print("O sobrenome não existe")
 else:
     print(person["sobrenome"])
+ """

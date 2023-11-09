@@ -2,24 +2,19 @@
 
 questions = [
     {
-        "Pergunta": "Qual a akuma no mi do Monkey D. Luffy?",
-        "Opções": [
-            "Bara Bara no mi",
-            "Gomu Gomu no mi",
-            "Pika Pika no mi",
-            "Doa Doa no mi",
-        ],
-        "Resposta": "Gomu Gomu no mi",
+        "Pergunta": "Quanto é 2 * 2",
+        "Opções": ["6", "8", "2", "4"],
+        "Resposta": "4",
     },
     {
-        "Pergunta": "Quantas esferas do dragão existem na Terra?",
-        "Opções": ["7", "14", "8", "10"],
+        "Pergunta": "Qual o nome do satélite natural da Terra?",
+        "Opções": ["Europa", "Galaxia", "Lua", "Sol"],
+        "Resposta": "Lua",
+    },
+    {
+        "Pergunta": "Quanto é 1 + 6?",
+        "Opções": ['7', '5', '6', '1'],
         "Resposta": "7",
-    },
-    {
-        "Pergunta": "Qual o nome da zanpakutou de Ichigo?",
-        "Opções": ["Shiranui", "Tobimaru", "Zamasu", "Zangetsu"],
-        "Resposta": "Zangetsu",
     },
     {
         "Pergunta": "Quanto é 2 * 55?",
@@ -28,8 +23,10 @@ questions = [
     },
 ]
 
+
+
+print(f'Responda:', questions[1]['Pergunta'])
+
 # função para fazer pergunta
-
-
 def asking():
     ...
