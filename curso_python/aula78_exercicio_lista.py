@@ -24,24 +24,31 @@ exam = [
 ]
 
 counter_right = 0
+print(f"Vamos começar! O teste possui", len(exam), "questões. Responda: ")
+print()
 
 for question in exam:
     print(question["Pergunta"])
+    print()
     for alternatives in question["Opções"]:
         print(alternatives)
+    print()
     answer_check = input("Digite a alternativa: ")
+    print()
     # transformar a alternativa em letra minúscula para checagem
     if answer_check.isupper():
         answer_check = answer_check.lower()
 
     if question["Resposta"] == answer_check and answer_check.isalpha():
-        print("Correto!")
+        print("Correto! 👍")
         counter_right += 1
+
     elif question["Resposta"] != answer_check:
-        print("Errou!")
+        print("Errou! ❌")
     else:
         print("Digite uma alternativa válida")
 
+    print()
 print(f"Teste finalizado! Você acertou {counter_right} de ", len(exam), "questões.")
 
 
