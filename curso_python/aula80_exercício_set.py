@@ -27,6 +27,35 @@ lista_de_listas_de_inteiros = [
 ]
 
 
+def find_number():
+    for setnumber in lista_de_listas_de_inteiros:
+        print(setnumber)
+        i = 0
+        lista = []
+        for number in setnumber:
+            lista.append(number)
+            if verifica(lista):
+                break
+
+
+def verifica(lista):
+    if len(lista) == 1:
+        return
+    i = 0
+    condicao = True
+    while i < len(lista) - 1 and condicao:
+        j = i + 1
+        while j < len(lista) and condicao:
+            if lista[i] == lista[j]:
+                print(lista[i])
+                return True
+            j += 1
+        i += 1
+
+
+find_number()
+
+
 """ def find_number():
     for setnumber in lista_de_listas_de_inteiros:
         num_occur = []
