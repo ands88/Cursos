@@ -26,37 +26,22 @@ lista_de_listas_de_inteiros = [
     [10, 9, 8, 7, 6, 5, 4, 3, 2, 1],
 ]
 
- #código 1 - a função verifica a existência de números 
- # repetidos e no final, retorna todos em uma única lista
- 
-def find_number(lista):
-    num_occur = set()
-    for number in lista:
-        if number in num_occur:
-            return number
-        num_occur.add(number)
-    return -1
+def encontra_primeiro_duplicado(lista_de_inteiros):
+    numeros_checados = set()
+    primeiro_duplicado = -1
 
-final_results = []
+    for numero in lista_de_inteiros:
+        if numero in numeros_checados:
+            primeiro_duplicado = numero
+            break
 
-#código 2 - a função verifica a existência de números repetidos e,
-#no final, retorna a lista inteira e o número repetido abaixo
+        numeros_checados.add(numero)
+
+    return primeiro_duplicado
+
 
 for lista in lista_de_listas_de_inteiros:
-    result = find_number(lista)
-    final_results.append(result)
-
-print(final_results)
-
-def verify (list_of_lists):
-    ver_list = set()
-    for ver_number in list_of_lists:
-        if ver_number in ver_list:
-            return ver_number
-        ver_list.add(ver_number)
-    return -1
-
-for lista in lista_de_listas_de_inteiros:
-    result = verify(lista)
-    print(lista)
-    print(result)
+    print(
+        lista,
+        encontra_primeiro_duplicado(lista)
+    )
