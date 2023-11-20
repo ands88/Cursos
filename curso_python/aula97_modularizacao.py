@@ -12,4 +12,6 @@ import sys
 import aula97_m
 
 print("Esse módulo chama-se", __name__)
-print(*sys.path, sep="\n")
+#print(*sys.path, sep="\n")
+print(aula97_m.variavel_m)
+print(aula97_m.soma(3,4))
