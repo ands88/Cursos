@@ -11,27 +11,37 @@ products = [
     {'nome': 'Produto 4', 'preco': 69.90},
 ]
 
-import copy
+import copy 
 
 # Aumenta os preços em 10%
-novos_produtos = []
-for produto in products:
-    novo_produto = copy.deepcopy(produto)
-    novo_produto['preco'] *= 1.10
-    novos_produtos.append(novo_produto)
+new_products = []
+for item in products:
+    new_products = copy.deepcopy(item)
+    new_products['preco'] *= 1.10
+    new_prooducts.append(new_products)
 
-# Exibe os produtos originais e os novos produtos
-print("Produtos Originais:")
-for produto in products:
-    print(f"{produto['nome']}: R${produto['preco']:.2f}")
+# lista dos produtos com os valores originais e modificados
 
-print("\nNovos Produtos:")
-for produto in novos_produtos:
-    print(f"{produto['nome']}: R${produto['preco']:.2f}")
+print("Produtos:")
+for item in products:
+    print(f"{item['nome']}: R${item['preco']:.2f}")
+print()
+
+print("Novos Preços:")
+for item in new_products:
+    print(f"{item['nome']}: R${item['preco']:.2f}")
 
 
 # Ordene os produtos por nome decrescente (do maior para menor)
 # Gere produtos_ordenados_por_nome por deep copy (cópia profunda)
+
+new_products = []
+for item in products:
+    new_products = copy.deepcopy(item)
+    new_products = append(new_products)
+new_products = sorted(new_products, key=lambda item: item["nome"])
+
+print(new_products)
 
 # Ordene os produtos por preco crescente (do menor para maior)
 # Gere produtos_ordenados_por_preco por deep copy (cópia profunda)
