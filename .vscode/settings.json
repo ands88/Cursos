@@ -6,7 +6,7 @@
     "workbench.colorTheme": "OM Theme (Default Dracula Italic)",
     "code-runner.executorMap": {
         "python": "clear ; python -u",
-    "system.language": "English"
+    "system.language": "english"
     },
     "code-runner.runInTerminal": true,
     "code-runner.ignoreSelection": true
