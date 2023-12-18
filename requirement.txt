@@ -1,0 +1,5 @@
+autopep8==2.0.4
+clipboard==0.0.4
+pycodestyle==2.11.1
+pyperclip==1.8.2
+tomli==2.0.1
