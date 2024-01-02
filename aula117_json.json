@@ -1,0 +1,22 @@
+{
+  "nome": "Anderson R",
+  "sobrenome": "Martins",
+  "endereços": [
+    {
+      "rua": "22",
+      "numero": 53
+    },
+    {
+      "rua": "J-1",
+      "numero": 90
+    }
+  ],
+  "altura": 1.82,
+  "numeros_preferidos": [
+    3,
+    8,
+    9
+  ],
+  "dev": true,
+  "nada": null
+}
