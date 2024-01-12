@@ -16,6 +16,9 @@ class Client:
        for address in self.address:
            print(address.street, address.number)
     
+    def __del__(self):
+        print("Apagando", self.name)
+    
 class Address:
     def __init__ (self, street, number):
         self.street = street
@@ -28,5 +31,7 @@ client1 = Client ("Anderson")
 client1.insert_address("Av. 1", 60)
 client1.insert_address("Rua 33", 521)
 client1.list_address()
+
+del client1
 
 print("FIM DO CÓDIGO")
