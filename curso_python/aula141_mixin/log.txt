@@ -1,0 +1,5 @@
+Success: Que legal Dentro da classe LogFileMixin
+Error: Something Dentro da classe LogFileMixin
+Success: Que legal Dentro da classe LogFileMixin
+Error: Something Dentro da classe LogFileMixin
+Success: Que legal Dentro da classe LogFileMixin
