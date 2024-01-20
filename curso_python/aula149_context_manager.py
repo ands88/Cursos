@@ -34,9 +34,20 @@ class MyOpen:
     def __exit__(self, class_exception, exception_, traceback_):
         print('Exit, fechando arquivo')
         self._file.close()
-    
+
+        # raise class_exception(*exception_.args).with_traceback(traceback_)
+
+        # print(class_exception)
+        # print(exception_)
+        # print(traceback_)
+        # exception_.add_note('Minha nota')
+        # return True # o erro (TypeError: TextIOWrapper.write() takes exactly one argument (2 given)) foi tratado mas é somente impressa a linha 1, pois o erro acontece na linha 2
+
+        raise ConnectionError('Not connected')
 
 with MyOpen('aula149_context_manager.txt', 'w') as file:
-    file.write('Cool beans')
+    file.write('Linha 1 - Cool beans\n')
+    file.write('Linha 2 - Noice\n', 123) #TypeError: TextIOWrapper.write() takes exactly one argument (2 given)
+    file.write('Linha 3 - Hot Stuff\n')
     print('With', file)
     
