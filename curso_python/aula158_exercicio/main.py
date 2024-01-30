@@ -31,37 +31,38 @@ Banco será responsável autenticar o cliente e as contas da seguinte maneira:
 Só será possível sacar se passar na autenticação do banco (descrita acima)
 Banco autentica por um método.
 """
-from classes import Pessoa, Conta, Banco
+from classes import Cliente, ContaCorrente, ContaPoupanca
 
-class Cliente(Pessoa):
-    def __init__(self, nome: str, sobrenome: str, idade: int):
-        super().__init__(nome, sobrenome, idade)
-    
-class ContaCorrente(Conta):
-    def __init__(self, agencia: int, numero_conta: int, saldo: int | float, cc=True):
-        super().__init__(agencia, numero_conta, saldo)
+clients_data = [
+    {'nome': 'João', 'sobrenome': 'Silva', 'idade': 28, 'agencia': '002', 'numero_conta_cc': '67890', 'numero_conta_cp': '98765'},
+    {'nome': 'Maria', 'sobrenome': 'Santos', 'idade': 40, 'agencia': '003', 'numero_conta_cc': '11111', 'numero_conta_cp': '22222'},
+    {'nome': 'Carlos', 'sobrenome': 'Oliveira', 'idade': 22, 'agencia': '004', 'numero_conta_cc': '33333', 'numero_conta_cp': '44444'},
+    {'nome': 'Ana', 'sobrenome': 'Lima', 'idade': 55, 'agencia': '005', 'numero_conta_cc': '55555', 'numero_conta_cp': '66666'},
+    {'nome': 'Lucia', 'sobrenome': 'Rodrigues', 'idade': 30, 'agencia': '006', 'numero_conta_cc': '77777', 'numero_conta_cp': '88888'}
+]
 
-    def sacar(self):
-        pass
+clients = [Cliente(**data) for data in clients_data]
 
-    def depositar(self):
-        pass
 
-class ContaPoupanca(Conta):
-    def __init__(self, agencia: int, numero_conta: int, saldo: int | float, cp=True):
-        super().__init__(agencia, numero_conta, saldo)
+# class Banco:
+       
+#     def __init__(self):
+#         pass
 
-    def sacar(self):
-        pass
+#     def auth_cc (self, cliente, conta_c, agencia):
+#        if cliente in self.lista_clientes and conta_c in self.lista_cc and agencia in self.lista_agencias:
+#            print ("Conta Corrente autenticada!")
+#            return True
+#        else:
+#            print ("Falha na autenticação da Conta Corrente.")
+#            return False
 
-    def depositar(self):
-        pass
+#     def auth_cp (self, cliente, conta_p, agencia):
+#        if cliente in self.lista_clientes and conta_p in self.lista_cp and agencia in self.lista_agencias:
+#            print ("Conta Poupança autenticada!")
+#            return True
+#        else:
+#            print ("Falha na autenticação da Conta Poupança.")
+#            return False
 
-    
-cl1 = Cliente ('Anderson', 'Martins', 35)  
-conta1 = Conta(23, 12345, 1234.56, cl1.fullname())
-
-print(cl1.fullname())
-print(cl1.idade)
-
-print(conta1.informacao_conta())
+print(clients[1].get_cp().get_agencia())
