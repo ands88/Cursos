@@ -31,13 +31,3 @@ Banco será responsável autenticar o cliente e as contas da seguinte maneira:
 Só será possível sacar se passar na autenticação do banco (descrita acima)
 Banco autentica por um método.
 """
-from banco import Banco, clients_data
-   
-    
-cliente = Banco().auth(1234, '67890', '002')  
-cliente.get_cc().depositar(200)
-cliente.get_cp().sacar(900)
-cliente.get_cc().sacar(300)
-
-
-#print(clients[0].get_cc().get_conta())
